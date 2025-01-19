@@ -6,7 +6,7 @@
 
 ```bash
 mkdir -p ./guacdb/init
-docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --postgresql > ./guacdb/init/initdb.sql
+docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --postgresql > ./runtime/guacdb/init/initdb.sql
 ```
 
 ## launch containers
@@ -18,10 +18,10 @@ docker compose up -d
 Use admin@example.com/changeme to login NPM @ http://127.0.0.1:81/
 
 ### Add proxy host
-Domain Names: [your domain name]
-Scheme: http
-Forward Hostname: guacamole
-Forward Port: 8080
+Domain Names: [your domain name] 
+Scheme: http 
+Forward Hostname: guacamole 
+Forward Port: 8080 
 
 ### Enable SSL
 
@@ -29,7 +29,7 @@ Turn Force SSL on
 
 ## login from local via http://your_domain_name:8080/guacamole/
 
-Use guacadmin/guacadmin
+Use guacadmin/guacadmin 
 Add an local admin user. The user’s username must match the AzureAD user’s email, ie, jtong@creekside.network. Assign admin permissions etc.
 
 ## Configure NPM 2

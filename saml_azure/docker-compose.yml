@@ -13,8 +13,8 @@ services:
       internal:
     restart: always
     volumes:
-      - ./monitor/drive:/drive:rw
-      - ./monitor/record:/record:rw
+      - ./runtime/monitor/drive:/drive:rw
+      - ./runtime/monitor/record:/record:rw
 
   # postgres
   postgres:
@@ -29,8 +29,8 @@ services:
       internal:
     restart: always
     volumes:
-      - ./guacdb/init:/docker-entrypoint-initdb.d:z
-      - ./guacdb/data:/var/lib/postgresql/data:Z
+      - ./runtime/guacdb/init:/docker-entrypoint-initdb.d:z
+      - ./runtime/guacdb/data:/var/lib/postgresql/data:Z
 
   # guacamole
   guacamole:
@@ -75,8 +75,8 @@ services:
       # Uncomment the line below if IPv6 is not enabled on your host
       DISABLE_IPV6: 'true'
     volumes:
-      - ./npm/data:/data
-      - ./npm/letsencrypt:/etc/letsencrypt
+      - ./runtime/npm/data:/data
+      - ./runtime/npm/letsencrypt:/etc/letsencrypt
     depends_on:
       - npm-db
     networks:
@@ -92,6 +92,6 @@ services:
       MYSQL_USER: 'npm'
       MYSQL_PASSWORD: 'npm'
     volumes:
-      - ./npm/mysql:/var/lib/mysql
+      - ./runtime/npm/mysql:/var/lib/mysql
     networks:
       internal:
