@@ -1,7 +1,11 @@
-Guacamole / NPM / SAML SSO
---------------------------
+# Guacamole / NPM / SAML SSO
 
-Prepare database initialization
-   <mkdir ./guacdb/init>
-   <docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --postgresql > ./guacdb/init/initdb.sql>
+---
+
+## Prepare database initialization
+
+```bash
+mkdir ./guacdb/init
+docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --postgresql > ./guacdb/init/initdb.sql
+```
  
