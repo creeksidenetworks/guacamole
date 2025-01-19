@@ -44,7 +44,7 @@ services:
       POSTGRES_HOSTNAME: postgres
       POSTGRES_PASSWORD: 'Good2Great'
       POSTGRES_USER: guacamole_user
-      EXTENSION_PRIORITY: "saml"
+      EXTENSION_PRIORITY: "* saml"
       SKIP_IF_UNAVAILABLE: "saml"
       GUACAMOLE_HOME: '/etc/guacamole'
     image: guacamole/guacamole
