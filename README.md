@@ -25,22 +25,22 @@ mkdir -p ./runtime/guacdb/init
 docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --postgresql > ./runtime/guacdb/init/initdb.sql
 ```
 
-## launch containers
+- launch containers
 ```bash
 docker compose up -d
 ```
 
-## Configure NPM
+- Configure NPM
 Use admin@example.com/changeme to login NPM @ http://127.0.0.1:81/
 
-### Add proxy host
-- Domain Names: [your domain name]
-- Scheme: http
-- Forward Hostname: guacamole
-- Forward Port: 8080
-- Turn on websocket support
+- Add proxy host
+    - Domain Names: [your domain name]
+    - Scheme: http
+    - Forward Hostname: guacamole
+    - Forward Port: 8080
+    - Turn on websocket support
 
-## In advance configue, paste following
+- In advance configue, paste following
 
 ```markdown
 location / {
@@ -58,7 +58,7 @@ location / {
 }
 ```
 
-### Enable docker compose up -d
+- Enable SSL
 
 Turn Force SSL on
 
