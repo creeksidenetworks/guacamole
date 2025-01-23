@@ -8,7 +8,7 @@
 
 Create .env file and add filling following values
 
-```
+```markdown
 ## SAML Configuration
 SAML_IDP_METADATA_URL=<meta URL>
 ## Alternative: Single Sign On URL from Azure registration, end with "saml2"
@@ -42,7 +42,8 @@ Use admin@example.com/changeme to login NPM @ http://127.0.0.1:81/
 
 ## In advance configue, paste following
 
-```location / {
+```markdown
+location / {
     proxy_pass http://guacamole:8080/guacamole/;
     proxy_buffering off;
     proxy_http_version 1.1;
