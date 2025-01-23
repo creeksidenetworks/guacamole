@@ -62,11 +62,10 @@ location / {
 }
 ```
 
-## login from local via http://your_domain_name:8080/guacamole/
-
-Use guacadmin/guacadmin to login.
-
-Add an local admin user. The user’s username must match the AzureAD user’s email, ie, jtong@creekside.network. Assign admin permissions etc. Do not fill in any password.
+## To add Azure AD user as an admin
+- login from local via http://your_domain_name:8080/guacamole/
+- Use guacadmin/guacadmin to login.
+- Add an local admin user. The user’s username must match the AzureAD user’s email, ie, jtong@creekside.network. Assign admin permissions etc. Do not fill in any password.
 
 ## Tips
 - Remove local database login
