@@ -34,13 +34,27 @@ docker compose up -d
 Use admin@example.com/changeme to login NPM @ http://127.0.0.1:81/
 
 ### Add proxy host
-Domain Names: [your domain name] 
+- Domain Names: [your domain name]
+- Scheme: http
+- Forward Hostname: guacamole
+- Forward Port: 8080
+- Turn on websocket support
 
-Scheme: http 
+## In advance configue, paste following
 
-Forward Hostname: guacamole 
-
-Forward Port: 8080 
+```location / {
+    proxy_pass http://guacamole:8080/guacamole/;
+    proxy_buffering off;
+    proxy_http_version 1.1;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection $http_connection;
+    proxy_cookie_path /guacamole/ /;
+    access_log off;
+    # allow large uploads (default=1m)
+    # 4096m = 4GByte
+    client_max_body_size 4096m;
+}```
 
 ### Enable docker compose up -d
 
