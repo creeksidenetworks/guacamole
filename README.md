@@ -54,7 +54,8 @@ Use admin@example.com/changeme to login NPM @ http://127.0.0.1:81/
     # allow large uploads (default=1m)
     # 4096m = 4GByte
     client_max_body_size 4096m;
-}```
+}
+```
 
 ### Enable docker compose up -d
 
