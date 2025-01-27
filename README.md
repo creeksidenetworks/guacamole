@@ -69,7 +69,7 @@ location / {
 }
 ```
 
-# Proxy non-standard port with NGINX 
+## Proxy non-standard port with NGINX 
 
 - Obtain Let's encryption certificates
 
@@ -147,13 +147,14 @@ server {
 sudo systemctl start nginx 
 sudo systemctl enable nginx 
 ```
-## To add Azure AD user as an admin
+## Mapping Azure AD user as an admin
 - login from local via http://your_domain_name:8080/guacamole/
 - Use guacadmin/guacadmin to login.
 - Add an local admin user. The user’s username must match the AzureAD user’s email, ie, jtong@creekside.network. Assign admin permissions etc. Do not fill in any password.
 
-## Tips
-- Remove local database login by modify docker-compose.yml
+
+## Remove local database login
+modify docker-compose.yml
 
 | EXTENSION_PRIORITY (w/ login) | "*, saml" |
 |------------|------------|
